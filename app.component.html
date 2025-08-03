@@ -1,0 +1,12 @@
+<h1>🌐 Angular + JWT App</h1>
+
+<div *ngIf="user; else login">
+  <p>Bienvenido, {{ user.name }}</p>
+  <button (click)="logout()">Cerrar sesión</button>
+</div>
+
+<ng-template #login>
+  <p>No estás autenticado.</p>
+  <button (click)="login()">Iniciar sesión (simulado)</button>
+</ng-template>
+
